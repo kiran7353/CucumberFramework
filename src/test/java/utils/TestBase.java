@@ -1,6 +1,6 @@
 package utils;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,10 +30,10 @@ public class TestBase {
 
         if(driver==null) {
             if(browser.equalsIgnoreCase("chrome")) {
-                WebDriverManager.chromedriver().setup();
+//                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
             } else if(browser.equalsIgnoreCase("edge")){
-                WebDriverManager.edgedriver().setup();
+//                WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
             }
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
