@@ -4,6 +4,7 @@ package utils;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -28,10 +29,16 @@ public class TestBase {
         String browser_maven=System.getProperty("browser");
         String browser=browser_maven!=null?browser_maven:brower_properties;
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+
+
         if(driver==null) {
             if(browser.equalsIgnoreCase("chrome")) {
 //                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+
+                driver = new ChromeDriver(options);
             } else if(browser.equalsIgnoreCase("edge")){
 //                WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
