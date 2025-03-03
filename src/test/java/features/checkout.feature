@@ -1,6 +1,6 @@
 Feature: Place the order for Products
 
-  @PlaceOrder
+  @PlaceOrder @Smoke
   Scenario Outline: Search Experience for the product search in both home and offers page
     Given user is on GreenCart landing page
     When user searched with shortname called <Name> and extracted actual name of product
