@@ -28,11 +28,9 @@ public class TestBase {
         String brower_properties=prop.getProperty("browser");
         String browser_maven=System.getProperty("browser");
         String browser=browser_maven!=null?browser_maven:brower_properties;
-
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
-//        options.addArguments("--disable-gpu");
-
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
 
         if(driver==null) {
             if(browser.equalsIgnoreCase("chrome")) {
