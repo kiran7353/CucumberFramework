@@ -36,7 +36,7 @@ public class TestBase {
             if(browser.equalsIgnoreCase("chrome")) {
 //                WebDriverManager.chromedriver().setup();
 
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
             } else if(browser.equalsIgnoreCase("edge")){
 //                WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
