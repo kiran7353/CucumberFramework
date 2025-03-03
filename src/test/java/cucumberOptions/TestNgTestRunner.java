@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
         glue = "stepDefinitions",
         monochrome = true,
         tags = "@${tag_selection}",
+//        tags = "@Smoke",
         plugin = {"html:target/cucumber.html",
                 "json:target/cucumber.json",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
